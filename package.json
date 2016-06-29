@@ -1,0 +1,14 @@
+{
+  "name": "uno-fe",
+  "version": "1.0.0",
+  "description": "Testing headless drupal with uno front end",
+  "main": "hellotest.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "grunt": "^1.0.1"
+  }
+}
