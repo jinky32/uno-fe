@@ -1,10 +1,16 @@
-var http = require('http');
+var express = require('express');
+var app = express();
 
-var myServer = http.createServer(function(request, response) {
-    response.writeHead(200, {"Content-Type" : "text/html"});
-    response.write(" Hello Test Node");
-    response.end();
+app.get ('/', function(req, res){
+    res.send('Hello Express');
 });
 
-myServer.listen(2000); // create server
+app.get ('/about-us', function(req, res){
+    res.send('<h1>Stuart testing headless drupal</h1>')
+})
+
+var server = app.listen (2000, function(){
+    console.log('Waiting for you on port 2000');
+});
+
 
