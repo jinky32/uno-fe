@@ -1,0 +1,33 @@
+<article>
+    <a href="<% item.path %>" class="more-link">
+        <div class="post-container">
+            <div class="post-name">
+                <h2 class="entry-title">
+                    <% item.title %>
+                </h2>
+                <% if(item.field_blog_image) { %>
+                <div class="post-thumb">
+                    <div class="hover-wrap">
+                        <% item.field_blog_image %>
+                        <span class="overlay">
+                                <span class="circle"><i class="font-icon-plus-3"></i>
+                                </span>
+                            </span>
+                    </div>
+                </div>
+                <% } %>
+                <div class="entry-meta entry-header">
+                    <span class="published"><% item.created %></span>
+                    <div class="hidden">Drupal</div>
+                    <span class="hidden"><% item.field_author_image %></span>
+                    <meta content="<% item.systemdate %>" />
+                </div>
+            </div>
+
+            <div class="entry=content">
+                <p><% item.body %></p>
+            </div>
+
+        </div>
+    </a>
+</article>

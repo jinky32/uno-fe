@@ -16,14 +16,17 @@ request({
 }, function(error, response, body){
     if (!error && response.statusCode===200) {
         blogsdata_all = body;
+        //console.log(blogsdata_all);
     }
 
     var blogs = [];
-
-    blogsdata_all.blogs.forEach(function(item){
-        blogs = blogs.concat(item);
+    //console.log(blogsdata_all);
+    //blogsdata_all.blogs.forEach(function(item){
+    //    blogs = blogs.concat(item);
+    //});
+    blogsdata_all.forEach(function(item){
+        blogs.push(item);
     });
-
     app.locals.blogsdata = blogs;
 })
 

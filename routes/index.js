@@ -15,7 +15,11 @@ module.exports = (function() {
         //Loop through json data and pick correct blog post based on current url
         blogsdata.forEach(function (item) {
             if (item.title == currentURL) {
+
                 blogItem = item;
+                console.log(item);
+            } else {
+                console.log('doesnt match');
             }
         });
 
